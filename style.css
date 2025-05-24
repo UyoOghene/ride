@@ -184,11 +184,12 @@ nav ul li a:hover {
 }
 
 .hero p {
-    font-family: cursive;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
     font-size: 1rem;
     max-width: 700px;
     margin: 0 auto 1rem;
-        color: rgb(40, 38, 38);
+    color: rgb(38, 40, 41);
 
 }
 
@@ -243,7 +244,8 @@ nav ul li a:hover {
 }
 
 .about p {
-    font-family: cursive;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
     font-size: 0.8rem;
     font-weight: 80px;
     margin: 0 auto 1.5rem;
