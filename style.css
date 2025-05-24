@@ -184,9 +184,12 @@ nav ul li a:hover {
 }
 
 .hero p {
+    font-family: cursive;
     font-size: 1rem;
     max-width: 700px;
     margin: 0 auto 1rem;
+        color: rgb(40, 38, 38);
+
 }
 
 /* Services Section */
@@ -240,13 +243,16 @@ nav ul li a:hover {
 }
 
 .about p {
+    font-family: cursive;
     font-size: 0.8rem;
+    font-weight: 80px;
     margin: 0 auto 1.5rem;
     text-align: center;
+    color: #07135f;
 }
 
 .about h2 {
-    color: #E40000;
+    color: #680651;
     font-size: 1.6rem;
 }
 
