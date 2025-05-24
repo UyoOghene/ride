@@ -58,3 +58,55 @@ window.addEventListener('scroll', function() {
         header.style.boxShadow = 'none';
     }
 });
+
+ // Testimonial Slider Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const testimonials = document.querySelectorAll('.testimonial');
+            const dots = document.querySelectorAll('.slider-dot');
+            const prevBtn = document.querySelector('.slider-prev');
+            const nextBtn = document.querySelector('.slider-next');
+            let currentIndex = 0;
+            
+            function showTestimonial(index) {
+                testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                testimonials[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentIndex = index;
+            }
+            
+            function nextTestimonial() {
+                let newIndex = (currentIndex + 1) % testimonials.length;
+                showTestimonial(newIndex);
+            }
+            
+            function prevTestimonial() {
+                let newIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+                showTestimonial(newIndex);
+            }
+            
+            // Auto-rotate testimonials every 5 seconds
+            let autoSlide = setInterval(nextTestimonial, 5000);
+            
+            // Event listeners
+            nextBtn.addEventListener('click', function() {
+                clearInterval(autoSlide);
+                nextTestimonial();
+                autoSlide = setInterval(nextTestimonial, 5000);
+            });
+            
+            prevBtn.addEventListener('click', function() {
+                clearInterval(autoSlide);
+                prevTestimonial();
+                autoSlide = setInterval(nextTestimonial, 5000);
+            });
+            
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    clearInterval(autoSlide);
+                    showTestimonial(index);
+                    autoSlide = setInterval(nextTestimonial, 5000);
+                });
+            });
+        });
