@@ -383,7 +383,7 @@ nav ul li a:hover {
     }
 
 
-/* Process Section - Enhanced */
+/* Process Section  */
 .process {
     padding: 100px 0;
     background: url('images/louis-hansel-yLUvnCFI500-unsplash.jpg') no-repeat center center/cover;
@@ -418,6 +418,9 @@ nav ul li a:hover {
     color: var(--gray);
     max-width: 600px;
     margin: 0 auto;
+}
+.howh2{
+    color: #3498db;
 }
 
 .process-steps {
@@ -842,7 +845,7 @@ nav ul li a:hover {
     }
 
     .hero p {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 
     h2 {
