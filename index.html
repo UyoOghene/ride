@@ -54,7 +54,9 @@
 <section class="hero">
         <div id="hero-text" class="container">
             <h2>Professional Designated Driver Service</h2>
-            <p>Feeling unwell, recovering from a procedure, or had a night of drinks? Our designated drivers are here to get you and your car home safely.</p>
+            <p> Your go-to designated driver service across Canada. Had a few drinks and can’t drive?
+                 Our friendly, licensed drivers will get you and your car home safely, no stress. Nights out are for fun—not for worrying about how to get back.
+                 We’re here to make sure you get home safely, comfortably, and without the risk.</p>
             <a href="#contact" class="btn">Book Now</a>
         </div>
     </section>
@@ -64,20 +66,26 @@
             <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <i class="fas fa-procedures"></i>
+                    <!-- <i class="fas fa-glass-cheers"></i> -->
+                    <img class="services-img" src="images/john-arano-_qADvinJi20-unsplash.jpg" alt="">
+                    <h3>Night Out</h3>
+                    <p>Enjoy your evening out with as many drinks without worrying about how to get your car home safely.</p>
+                </div>
+
+                 <div class="service-card">
+                    <img class="services-img" src="images/timur-m-IINmPXukZck-unsplash.jpg" alt="">
+
+                    <h3>Feeling Unwell</h3>
+                    <p>When you're not feeling well enough to drive but need to get home or to appointments.</p>
+                </div>
+
+                <div class="service-card">
+                    <!-- <i class="fas fa-procedures"></i> -->
+                    <img class="services-img" src="images/dina-badamshina-Ov0prCf7jFw-unsplash.jpg" alt="">
                     <h3>Medical Procedures</h3>
                     <p>Safe transportation after surgery or medical treatments when you're not fit to drive.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-ambulance"></i>
-                    <h3>Illness Recovery</h3>
-                    <p>When you're not feeling well enough to drive but need to get home or to appointments.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-glass-cheers"></i>
-                    <h3>Night Out</h3>
-                    <p>Enjoy your evening out without worrying about how to get your car home safely.</p>
-                </div>
+
             </div>
         </div>
     </section>
@@ -110,124 +118,143 @@
         </div>
     </section>
 
-        <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+15551234567">(555) 123-4567</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@Rume.ca">info@Rume.ca</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> Serving all major Canadian cities</p>
-                    
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Book a Driver</h3>
-                    <form id="booking-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" placeholder="Phone Number" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Email (optional)">
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="">Select Service</option>
-                                <option value="medical">Medical Procedure</option>
-                                <option value="illness">Illness Recovery</option>
-                                <option value="nightout">Night Out</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Additional Details"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Request Driver</button>
-                    </form>
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <!-- Your existing contact info remains the same -->
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-phone"></i> <a href="tel:+15551234567">(555) 123-4567</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@Rume.ca">info@Rume.ca</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Serving all major Canadian cities</p>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
+            <div class="contact-form">
+                <h3>Book a Driver</h3>
+<form id="booking-form" action="https://formspree.io/f/xqaqvlok" method="POST">
+    <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+    </div>
+    <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Email (optional)">
+    </div>
+
+    <!-- Pickup Location -->
+    <div class="form-group">
+        <div class="location-input-group">
+            <input type="text" id="pickup" name="pickup" placeholder="Pickup Location" required>
+            <button type="button" class="gps-btn" data-field="pickup">
+                <i class="fas fa-location-arrow"></i> Use My Location
+            </button>
         </div>
-    </section>
+        <input type="hidden" id="pickup-lat" name="pickupLat">
+        <input type="hidden" id="pickup-lng" name="pickupLng">
+    </div>
 
-
-
-    <section id="about" class="about">
-        <div id="about-text" class="container">
-            <h2>About Rume</h2>
-            <p>Rume is a professional designated driver service operating across Canada. Our drivers are fully licensed, insured, and trained to provide you with safe and reliable transportation when you're unable to drive yourself.</p>
-            <p>We understand that life happens - whether it's a medical procedure, unexpected illness, or a night out with friends. Our mission is to ensure you and your vehicle get home safely, with dignity and professionalism.</p>
+    <!-- Destination -->
+    <div class="form-group">
+        <div class="location-input-group">
+            <input type="text" id="destination" name="destination" placeholder="Destination" required>
+            <button type="button" class="gps-btn" data-field="destination">
+                <i class="fas fa-location-arrow"></i> Use My Location
+            </button>
         </div>
-    </section>
+        <input type="hidden" id="destination-lat" name="destinationLat">
+        <input type="hidden" id="destination-lng" name="destinationLng">
+    </div>
 
-
-
-
-
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>Client <span>Testimonials</span></h2>
-                <p class="section-subtitle">What our clients say about our service</p>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p>"After my knee surgery, Rume was a lifesaver. The driver was incredibly professional and even helped me with my crutches. 10/10 would recommend!"</p>
-                        <div class="client-info">
-                            <div class="client-name">Sarah Tucker</div>
-                            <div class="client-location">Toronto, ON</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p>"Used Rume after a company holiday party. They showed up exactly when promised and got all three of us and our car home safely. Worth every penny."</p>
-                        <div class="client-info">
-                            <div class="client-name">James p.</div>
-                            <div class="client-location">Vancouver, BC</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p>"As a single woman, safety is my top concern. My Rume driver was female (as requested) and made me feel completely comfortable the whole ride."</p>
-                        <div class="client-info">
-                            <div class="client-name">Priya K.</div>
-                            <div class="client-location">Calgary, AB</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-controls">
-                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-dots">
-                        <div class="slider-dot active"></div>
-                        <div class="slider-dot"></div>
-                        <div class="slider-dot"></div>
-                    </div>
-                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
-                </div>
+    <div class="form-group">
+        <select id="service" name="service" required>
+            <option value="">Select Service</option>
+            <option value="medical">Medical Procedure</option>
+            <option value="illness">Illness Recovery</option>
+            <option value="nightout">Night Out</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <textarea id="details" name="details" placeholder="Additional Details"></textarea>
+    </div>
+    <button type="submit" class="btn">Request Driver</button>
+</form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div id="about-text" class="container">
+        <h2>About Rume</h2>
+        <p>Rume is a professional designated driver service operating across Canada. Our drivers are fully licensed, insured, and trained to provide you with safe and reliable transportation when you're unable to drive yourself.</p>
+        <p>We understand that life happens - whether it's a medical procedure, unexpected illness, or a night out with friends. Our mission is to ensure you and your vehicle get home safely, with dignity and professionalism.</p>
+    </div>
+</section>
 
 
+<section id="testimonials" class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2>Client <span>Testimonials</span></h2>
+            <p class="section-subtitle">What our clients say about our service</p>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial active">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"After my knee surgery, Rume was a lifesaver. The driver was incredibly professional and even helped me with my crutches. 10/10 would recommend!"</p>
+                    <div class="client-info">
+                        <div class="client-name">Sarah Tucker</div>
+                        <div class="client-location">Toronto, ON</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Used Rume after a holiday party in Mississauga. They arrived right on time and got us and our car home safe and sound. Great service!"</p>
+                    <div class="client-info">
+                        <div class="client-name">James P.</div>
+                        <div class="client-location">Mississauga, ON</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"As a woman, safety is always on my mind. I requested a female driver through Rume and she made me feel completely at ease. So grateful!"</p>
+                    <div class="client-info">
+                        <div class="client-name">Priya K.</div>
+                        <div class="client-location">Ottawa, ON</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <div class="slider-dot active"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                </div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
 
     <footer class="footer">
         <div class="container">
