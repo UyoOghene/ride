@@ -1,27 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
     // ===== Menu Functionality =====
+    const mobileMenuBtn = document.getElementById('mobile-menu');
     const menuToggle = document.getElementById('menu-toggle');
     const closeMenu = document.getElementById('close-menu');
     const mobileNav = document.querySelector('.mobile-nav');
     const menuOverlay = document.getElementById('menu-overlay');
     
-    if (menuToggle && mobileNav && menuOverlay) {
-        menuToggle.addEventListener('click', function() {
-            mobileNav.classList.add('active');
-            menuOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-        
-        closeMenu.addEventListener('click', function() {
-            mobileNav.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            document.body.style.overflow = '';
+    if (mobileMenuBtn && mobileNav && menuOverlay) {
+        mobileMenuBtn.addEventListener('click', function() {
+            // Toggle mobile nav and overlay
+            mobileNav.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            
+            // Toggle body overflow
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+            
+            // Toggle between menu and close icons
+            if (mobileNav.classList.contains('active')) {
+                menuToggle.style.display = 'none';
+                closeMenu.style.display = 'block';
+            } else {
+                menuToggle.style.display = 'block';
+                closeMenu.style.display = 'none';
+            }
         });
 
         menuOverlay.addEventListener('click', function() {
+            // Close menu when overlay is clicked
             mobileNav.classList.remove('active');
             menuOverlay.classList.remove('active');
             document.body.style.overflow = '';
+            
+            // Show menu icon, hide close icon
+            menuToggle.style.display = 'block';
+            closeMenu.style.display = 'none';
         });
     }
 
@@ -77,32 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-
-    // // ===== Form Submission =====
-    // const bookingForm = document.getElementById('booking-form');
-    // if (bookingForm) {
-    //     bookingForm.addEventListener('submit', function(e) {
-    //         e.preventDefault();
-            
-    //         const formData = {
-    //             name: document.getElementById('name')?.value,
-    //             phone: document.getElementById('phone')?.value,
-    //             email: document.getElementById('email')?.value,
-    //             pickup: document.getElementById('pickup')?.value,
-    //             pickupLat: document.getElementById('pickup-lat')?.value,
-    //             pickupLng: document.getElementById('pickup-lng')?.value,
-    //             destination: document.getElementById('destination')?.value,
-    //             destinationLat: document.getElementById('destination-lat')?.value,
-    //             destinationLng: document.getElementById('destination-lng')?.value,
-    //             service: document.getElementById('service')?.value,
-    //             details: document.getElementById('details')?.value
-    //         };
-            
-    //         console.log('Form data:', formData);
-    //         alert('Thank you for your booking request! We will contact you shortly.');
-    //         this.reset();
-    //     });
-    // }
 
     // ===== Testimonial Slider =====
     const testimonials = document.querySelectorAll('.testimonial');
@@ -167,4 +153,4 @@ document.addEventListener('DOMContentLoaded', function() {
             header.style.boxShadow = window.scrollY > 100 ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none';
         }
     });
-});
+}); // This is the correct closing brace for the DOMContentLoaded event listener

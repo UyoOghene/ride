@@ -29,16 +29,14 @@
             </ul>
         </nav>
         
-        <!-- Mobile Menu Toggle -->
-        <div class="mobile-menu">
+        <!-- Mobile Menu Toggle - Now contains both icons -->
+        <div class="mobile-menu" id="mobile-menu">
             <i class="fas fa-bars" id="menu-toggle"></i>
+            <i class="fas fa-times" id="close-menu" style="display: none;"></i>
         </div>
         
         <!-- Mobile Navigation (hidden by default) -->
         <div class="mobile-nav">
-            <div class="close-menu" id="close-menu">
-                <i class="fas fa-times"></i>
-            </div>
             <ul class="mobile-menu-ul">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
@@ -63,26 +61,26 @@
 
         <section id="services" class="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2 class="serv-h2" >Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <!-- <i class="fas fa-glass-cheers"></i> -->
                     <img class="services-img" src="images/john-arano-_qADvinJi20-unsplash.jpg" alt="">
-                    <h3>Night Out</h3>
+                    <h3>Safe ride After Drinks / Bar Outing</h3>
                     <p>Enjoy your evening out with as many drinks without worrying about how to get your car home safely.</p>
                 </div>
 
                  <div class="service-card">
                     <img class="services-img" src="images/timur-m-IINmPXukZck-unsplash.jpg" alt="">
 
-                    <h3>Feeling Unwell</h3>
+                    <h3>Safe Ride When You're Not Feeling Well</h3>
                     <p>When you're not feeling well enough to drive but need to get home or to appointments.</p>
                 </div>
 
                 <div class="service-card">
                     <!-- <i class="fas fa-procedures"></i> -->
                     <img class="services-img" src="images/dina-badamshina-Ov0prCf7jFw-unsplash.jpg" alt="">
-                    <h3>Medical Procedures</h3>
+                    <h3>Getting to Your Medical Appointment</h3>
                     <p>Safe transportation after surgery or medical treatments when you're not fit to drive.</p>
                 </div>
 
@@ -172,7 +170,7 @@
         <input type="hidden" id="destination-lng" name="destinationLng">
     </div>
 
-    <div class="form-group">
+    <!-- <div class="form-group">
         <select id="service" name="service" required>
             <option value="">Select Service</option>
             <option value="medical">Medical Procedure</option>
@@ -180,7 +178,7 @@
             <option value="nightout">Night Out</option>
             <option value="other">Other</option>
         </select>
-    </div>
+    </div> -->
     <div class="form-group">
         <textarea id="details" name="details" placeholder="Additional Details"></textarea>
     </div>

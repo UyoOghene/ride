@@ -79,7 +79,9 @@ a {
 
 /* Header Styles */
 header {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -143,10 +145,17 @@ nav ul li a:hover {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+.close-menu{
+    display: none;
 }
 
 .mobile-nav {
     display: none;
+
 }
 
 /* Hero Section */
@@ -164,6 +173,7 @@ nav ul li a:hover {
     text-align: center;
     color: white;
     padding-top: 150px;
+    margin-bottom: 10px;
 }
 
 #hero-text {
@@ -190,9 +200,9 @@ nav ul li a:hover {
 .hero p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;
-    font-size: 1rem;
+    font-size: 0.7rem;
     max-width: 700px;
-    margin: 0 auto 1rem;
+    margin: 0 auto 0.7rem;
     color: rgb(38, 40, 41);
 
 }
@@ -200,7 +210,16 @@ nav ul li a:hover {
 /* Services Section */
 .services {
     padding: 80px 0;
-    background-color: white;
+    background: url('images/leonie-zettl-4fK42t9P28E-unsplash.jpg') no-repeat center center/cover;
+    /* background-color: white; */
+    opacity: 0.9;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 15px solid white;
+    border-radius: 50px;
+}
+.serv-h2{
+    color: #3498db;
 }
 
 .services-grid {
@@ -218,7 +237,10 @@ nav ul li a:hover {
     /* height: ; */
 }
 .service-card {
-    background-color: var(--light);
+    /* background-color: var(--light); */
+    background-color: rgba(38, 42, 78, 0.52);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
@@ -228,6 +250,10 @@ nav ul li a:hover {
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-card p{
+    color: #3498db;
 }
 
 .service-card i {
@@ -767,6 +793,9 @@ nav ul li a:hover {
         z-index: 1001;
     }
 
+    .mobile-menu i {
+    transition: all 0.3s ease;
+}
     .mobile-nav {
         display: flex;
         position: fixed;
@@ -775,7 +804,9 @@ nav ul li a:hover {
         height: 100vh;
         width: 70%;
         max-width: 300px;
-        background-color: white;
+        background-color: rgba(243, 236, 236, 0.8);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         padding: 80px 2rem 2rem;
@@ -785,6 +816,7 @@ nav ul li a:hover {
 
     .mobile-nav.active {
         transform: translateX(0);
+        
     }
 
     .mobile-menu-ul {
