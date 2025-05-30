@@ -153,4 +153,40 @@ document.addEventListener('DOMContentLoaded', function() {
             header.style.boxShadow = window.scrollY > 100 ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none';
         }
     });
-}); // This is the correct closing brace for the DOMContentLoaded event listener
+});
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const form = document.getElementById('driverHireForm');
+//     const thankYouMessage = document.getElementById('thankYouMessage');
+    
+//     // Hide thank you message initially
+//     thankYouMessage.style.display = 'none';
+    
+//     form.addEventListener('submit', async function(e) {
+//         e.preventDefault();
+        
+//         try {
+//             const response = await fetch(form.action, {
+//                 method: 'POST',
+//                 body: new FormData(form),
+//                 headers: {
+//                     'Accept': 'application/json'
+//                 }
+//             });
+            
+//             if (response.ok) {
+//                 // Hide form and show thank you message
+//                 form.style.display = 'none';
+//                 thankYouMessage.style.display = 'block';
+                
+//                 // Reset form
+//                 form.reset();
+//             } else {
+//                 throw new Error('Form submission failed');
+//             }
+//         } catch (error) {
+//             console.error('Error:', error);
+//             alert('There was a problem submitting your form. Please try again.');
+//         }
+//     });
+// });

@@ -79,21 +79,22 @@ a {
 
 /* Header Styles */
 header {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(177, 199, 238, 0.5);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
+     /* margin-top: -120px;  */
+    /* height: calc( 120px);  */
     width: 100%;
     z-index: 1000;
 }
-
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding: 10px 0;
+    /* padding: 10px 0; */
 }
 
 .logo {
@@ -109,7 +110,11 @@ header {
     font-size: 1.8rem;
     color: var(--primary);
 }
-
+#logo-pic{
+    width: 120px ;
+    height: 100px;
+    border-radius: 10px;
+}
 .logo h1 span {
     color: var(--secondary);
 }
@@ -118,7 +123,7 @@ header {
     font-family: cursive;
     font-size: 1.2rem;
     font-weight: 2.5em;
-    color: #560a65;
+    color: #370442;
     margin-top: -5px;
 }
 
@@ -157,9 +162,146 @@ nav ul li a:hover {
     display: none;
 
 }
+.contact-method-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0; /* Reduced side padding */
+    color: white;
+    margin: 0px;
+    max-width: 1200px;
+    position: relative;
+}
 
+.cop-picture {
+    flex: 1;
+    position: relative;
+    height: 400px; /* Increased height */
+    min-width: 300px;
+    overflow: hidden;
+}
+
+/* Cloudy/blurred edges effect */
+.cop-picture::before,
+.cop-picture::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px; /* Width of the blur effect */
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.cop-picture::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(226, 221, 221, 0.8) 0%, transparent 100%);
+    filter: blur(10px);
+}
+
+.cop-picture::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(255,255,255,0.8) 0%, transparent 100%);
+    filter: blur(10px);
+}
+
+.cop-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.5s ease;
+     mask-image: linear-gradient(to right, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+}
+
+.cop-picture:hover img {
+    transform: scale(1.05);
+}
+
+.cop-picture h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+.contact-method-box {
+
+    flex: 1;
+    padding: 0 40px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    background: rgba(9, 41, 93, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-sm);
+}
+
+.contact-method:hover {
+    background: rgba(26, 58, 110, 1);
+    transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .contact-method-section {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    
+    .cop-picture {
+        width: 100%;
+        margin-bottom: 30px;
+        min-width: auto;
+        height: 300px;
+    }
+    
+    .contact-method-box {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-method {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .cop-picture h2 {
+        font-size: 1.5rem;
+        padding: 8px 15px;
+    }
+    
+    .cop-picture::before,
+    .cop-picture::after {
+        width: 50px; /* Smaller blur on mobile */
+    }
+}
 /* Hero Section */
 .hero {
+
     display: flex;
     justify-content: center;
     /* background: url('images/john-arano-_qADvinJi20-unsplash.jpg') no-repeat center center/cover; */
@@ -167,12 +309,15 @@ nav ul li a:hover {
     /* background: url('images/aleksandr-popov-2GNBoMgKYEo-unsplash.jpg') no-repeat center center/cover; */
     /* background: url('images/alyona-yankovska-7EbGkOm8pWM-unsplash.jpg') no-repeat center center/cover; */
     background: url('images/alyona-yankovska-7EbGkOm8pWM-unsplash.jpg') no-repeat center center/cover;
-    height: 80vh;
+    /* height: 80vh; */
+     padding-top: 0; /* Remove the 150px you had */
+    height: 80vh; /* Keep original height */
     display: flex;
     align-items: center;
     text-align: center;
     color: white;
-    padding-top: 150px;
+    /* margin-top: 120px; */
+    padding-top: 170px;
     margin-bottom: 10px;
 }
 
@@ -198,9 +343,10 @@ nav ul li a:hover {
 }
 
 .hero p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: oblique;
+    /* /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-style: oblique; 
     font-size: 0.7rem;
+    font-weight: 150px;
     max-width: 700px;
     margin: 0 auto 0.7rem;
     color: rgb(38, 40, 41);
@@ -210,16 +356,16 @@ nav ul li a:hover {
 /* Services Section */
 .services {
     padding: 80px 0;
-    background: url('images/leonie-zettl-4fK42t9P28E-unsplash.jpg') no-repeat center center/cover;
-    /* background-color: white; */
+    /* background: url('images/leonie-zettl-4fK42t9P28E-unsplash.jpg') no-repeat center center/cover; */
+    background-color: white;
     opacity: 0.9;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 15px;
     border: 15px solid white;
     border-radius: 50px;
 }
 .serv-h2{
-    color: #3498db;
+    color: #0b1076;
 }
 
 .services-grid {
@@ -238,7 +384,7 @@ nav ul li a:hover {
 }
 .service-card {
     /* background-color: var(--light); */
-    background-color: rgba(38, 42, 78, 0.52);
+    background-color: rgba(195, 195, 199, 0.709);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 30px;
@@ -533,7 +679,116 @@ nav ul li a:hover {
     box-shadow: 0 0 0 5px rgba(76, 201, 240, 0.3);
 }
 
-/* Testimonials Section - Enhanced */
+/* Hire Drivers Section */
+        .hire-hero {
+            background: 
+                        url('images/leonie-zettl-4fK42t9P28E-unsplash.jpg') center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+.hire-drivers {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.hire-drivers h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--dark-gray);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.hire-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.hire-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.hire-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.hire-form input,
+.hire-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.hire-form input:focus,
+.hire-form select:focus {
+    border-color: var(--secondary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.form-checkbox input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--secondary);
+    color: white;
+    padding: 14px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary);
+}
+
+.thank-you-message {
+    text-align: center;
+    padding: 30px;
+    display: none;
+}
+
+.thank-you-message i {
+    font-size: 4rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.thank-you-message h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.thank-you-message p {
+    color: var(--dark-gray);
+    margin-bottom: 0.5rem;
+}
+
+/* Testimonials Section */
 .testimonials {
     padding: 100px 0;
     background-color: var(--dark);
@@ -756,6 +1011,154 @@ nav ul li a:hover {
 .legal-links a:hover {
     color: white;
 }
+
+        .rates-hero {
+            background: 
+                        url('images/payment2.jpg') center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .pricing-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .pricing-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 12px 25px;
+            background: var(--light);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            border-radius: 5px 5px 0 0;
+            margin: 0 5px;
+        }
+        
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .card-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .card-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .card-price span {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .card-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-features li i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+        
+        .card-cta {
+            text-align: center;
+        }
+        
+        .faq-section {
+            background: var(--light);
+            padding: 60px 0;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .faq-question {
+            padding: 15px 20px;
+            background: var(--primary);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            display: none;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-tabs {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                border-radius: 5px;
+                margin-bottom: 5px;
+            }
+        }
+
 
 /* Responsive Styles */
 @media (max-width: 992px) {
