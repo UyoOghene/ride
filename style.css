@@ -182,6 +182,7 @@ nav ul li a:hover {
     height: 400px; /* Increased height */
     min-width: 300px;
     overflow: hidden;
+    border-radius: 30px;
 }
 
 /* Cloudy/blurred edges effect */
@@ -213,6 +214,7 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
     object-position: center;
+
     display: block;
     transition: transform 0.5s ease;
      mask-image: linear-gradient(to right, black 80%, transparent 100%);
@@ -257,6 +259,11 @@ nav ul li a:hover {
 .contact-method:hover {
     background: rgba(26, 58, 110, 1);
     transform: translateY(-5px);
+}
+
+.contact-icon{
+    margin: 10px;
+    padding-bottom: 10px;
 }
 
 .whatsapp-info {
@@ -406,8 +413,8 @@ nav ul li a:hover {
 }
 .service-card {
     /* background-color: var(--light); */
-    background-color: rgba(195, 195, 199, 0.709);
-    backdrop-filter: blur(20px);
+    background-color: rgba(220, 220, 226, 0.309);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(20px);
     padding: 30px;
     border-radius: 10px;
@@ -421,7 +428,10 @@ nav ul li a:hover {
 }
 
 .service-card p{
-    color: #3498db;
+    color: #051836;
+}
+.service-card h3{
+    color: #051836;
 }
 
 .service-card i {
@@ -429,6 +439,8 @@ nav ul li a:hover {
     color: var(--secondary);
     margin-bottom: 20px;
 }
+
+
 
 /* About Section */
 .about {
@@ -440,26 +452,26 @@ nav ul li a:hover {
 
 #about-text {
     width: 60%;
-    background-color: rgba(255, 255, 255, 0.312);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.935);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 30px;
     border-radius: 50px;
     color: black;
     padding: 10px;
 }
 
 .about p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: oblique;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     font-size: 0.8rem;
     font-weight: 80px;
     margin: 0 auto 1.5rem;
     text-align: center;
-    color: #07135f;
+    color: #051836;
 }
 
 .about h2 {
-    color: #680651;
+    color: #5b0247;
     font-size: 1.6rem;
 }
 
@@ -1296,7 +1308,7 @@ nav ul li a:hover {
             }
             
             .rates-hero h1 {
-                font-size: 2rem;
+                font-size: 1rem;
             }
             
             .service-grid {

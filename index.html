@@ -78,10 +78,10 @@
   <div class="contact-details">
     <h4>Call Us</h4>
     <p>
-      <a href="tel:+14379981586">437-998-1586</a>
+      <a href="tel:4379981586">437-998-1586</a>
       <a
         class="whatsapp-info"
-        href="https://wa.me/14379981586"
+        href="https://wa.me/4379981586"
         target="_blank"
         rel="noopener"
       >
@@ -170,6 +170,13 @@
                 <!-- Your existing contact info remains the same -->
                 <h3>Get in Touch</h3>
                 <p><i class="fas fa-phone"></i> <a href="tel:4379981586"> 437-998-1586</a></p>
+                <p><a
+                    class="whatsapp-info"
+                    href="https://wa.me/4379981586"
+                    target="_blank"
+                    rel="noopener"
+                ><i class="fab fa-whatsapp"></i>  (Also on WhatsApp, click to chat!)</a>
+                </p>
                 <p><i class="fas fa-envelope"></i> <a href="mailto:info@Rume.ca">rumedesignateddrivers@gmail.com</a></p>
                 <p><i class="fas fa-map-marker-alt"></i> Serving all major Canadian cities</p>
                 
@@ -244,69 +251,52 @@
 </section>
 
 <!-- Hiring -->
+<!-- In your index.html file, find the hiring section and modify it like this: -->
 <section id="hiring" class="hire-drivers">
     <div class="container">
         <h2>Join Our Team of Professional Drivers</h2>
-        <p class="section-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
-        
-        <div class="hire-form-container">
-            <form id="driverHireForm" class="hire-form" action="https://formspree.io/f/xwpogdvo" method="POST">
-                <div class="form-group">
-                    <label for="driverName">Full Name</label>
-                    <input type="text" id="driverName" name="name" required placeholder="John Doe">
-                </div>
-                
-                <div class="form-group">
-                    <label for="driverEmail">Email Address</label>
-                    <input type="email" id="driverEmail" name="email" required placeholder="john@example.com">
-                </div>
-                
-                <div class="form-group">
-                    <label for="driverPhone">Phone Number</label>
-                    <input type="tel" id="driverPhone" name="phone" required placeholder="+1234567890">
-                </div>
-                
-                <!-- <div class="form-group">
-                    <label for="driverLicense">Driver's License Number</label>
-                    <input type="text" id="driverLicense" name="license_number" required placeholder="DL12345678">
-                </div> -->
-                
-                <div class="form-group">
-                    <label for="driverExperience">Years of Driving Experience</label>
-                    <select id="driverExperience" name="experience" required>
-                        <option value="" disabled selected>Select experience</option>
-                        <option value="1-2">1-2 years</option>
-                        <option value="3-5">3-5 years</option>
-                        <option value="5+">5+ years</option>
-                    </select>
-                </div>
-                
-                <div class="form-group form-checkbox">
-                    <input type="checkbox" id="licenseValid" name="license_valid" required>
-                    <label for="licenseValid">I confirm my driver's license is valid and up-to-date</label>
-                </div>
-                
-                <!-- Hidden honeypot field for spam prevention -->
-                <input type="text" name="_gotcha" style="display:none">
-                
-                <!-- Formspree redirect after submission -->
-                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-                
-                <!-- Subject line for your emails -->
-                <input type="hidden" name="_subject" value="New Driver Application">
-                
-                <button type="submit" class="btn btn-submit">Apply Now</button>
-            </form>
-            
-            <div id="thankYouMessage" class="thank-you-message">
-                <i class="fas fa-check-circle"></i>
-                <h3>Thank You for Your Application!</h3>
-                <p>We've received your information and will contact you within 24 hours.</p>
-                <p>Our team will verify your driver's license and discuss next steps.</p>
-            </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="/careers.html" class="btn" style="
+                background-color: var(--accent);
+                padding: 15px 40px;
+                font-size: 1.1rem;
+                display: inline-block;
+                margin: 0 auto;
+            ">
+                <i class="fas fa-user-plus" style="margin-right: 10px;"></i>
+                Apply Now
+            </a>
         </div>
+        <p style="text-align: center; margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            We're hiring professional drivers across Canada. Competitive pay, flexible hours, and a rewarding job helping people get home safely.
+        </p>
     </div>
 </section>
+
+<div class="rate-card payment-methods">
+    <h2 style="text-align: center; color: var(--primary); margin-bottom: 20px;">Payment Options</h2>
+    <div class="service-grid">
+        <div class="payment-method">
+            <div class="payment-icon">
+                <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <h4>Cash</h4>
+            <!-- <p>Exact change preferred</p> -->
+        </div>
+        <div class="payment-method">
+            <div class="payment-icon">
+                <i class="fas fa-exchange-alt"></i>
+            </div>
+            <h4>E-Transfer</h4>
+            <!-- <p>Send to payments@rume.com</p> -->
+        </div>
+    </div>
+    <p class="payment-note" style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: var(--gray);">
+        Payment required at time of service unless corporate account
+    </p>
+</div>
+
+
 
 <section id="testimonials" class="testimonials">
     <div class="container">
@@ -364,6 +354,64 @@
     </div>
 </section>
 
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--primary); margin-bottom: 40px;">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How is the distance calculated for my trip?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Distance is calculated from your pickup location to your final destination using the most efficient route. The $30 pickup fee includes the first 5km, then $2.75/km applies for additional distance.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What payment methods do you accept?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept Cash and E-Transfers. </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How far in advance should I book?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We recommend booking at least 2 hours in advance for standard service. For events or weekends, 24-48 hours notice is ideal. Last-minute bookings are subject to availability.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What if my plans change after booking?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Please notify us at least 1 hour before your scheduled pickup time to avoid cancellation fees. Changes to pickup time or location may be accommodated based on availability.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Are your drivers licensed and insured?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, all Rume drivers are fully licensed professional drivers with clean driving records. We carry commercial auto insurance that meets or exceeds provincial requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -413,12 +461,6 @@
         </div>
     </footer>
 
-    <!-- <footer>
-        <div class="container">
-            <p>&copy; 2023 Rume Designated Driver Service. All rights reserved.</p>
-            <p>Servicing Canada with professionalism and care.</p>
-        </div>
-    </footer> -->
 
     <script src="./app.js"></script>
 </body>
