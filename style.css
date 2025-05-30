@@ -79,7 +79,8 @@ a {
 
 /* Header Styles */
 header {
-    background-color: rgba(177, 199, 238, 0.5);
+    /* background-color: rgba(177, 199, 238, 0.5); */
+    background-color: #051836;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -123,7 +124,7 @@ header {
     font-family: cursive;
     font-size: 1.2rem;
     font-weight: 2.5em;
-    color: #370442;
+    color: #5ac400;
     margin-top: -5px;
 }
 
@@ -137,7 +138,8 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--dark);
+    /* color: var(--dark); */
+    color: #ddd;
     font-weight: 600;
     transition: color 0.3s;
 }
@@ -257,6 +259,24 @@ nav ul li a:hover {
     transform: translateY(-5px);
 }
 
+.whatsapp-info {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #25D366; /* WhatsApp green */
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+.whatsapp-info i {
+  margin-right: 4px;
+}
+
+.whatsapp-info:hover {
+  text-decoration: underline;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
     .contact-method-section {
@@ -299,6 +319,8 @@ nav ul li a:hover {
         width: 50px; /* Smaller blur on mobile */
     }
 }
+
+
 /* Hero Section */
 .hero {
 
@@ -315,7 +337,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     text-align: center;
-    color: white;
+    color: #051836;
     /* margin-top: 120px; */
     padding-top: 170px;
     margin-bottom: 10px;
@@ -338,7 +360,7 @@ nav ul li a:hover {
 
 .hero h2 {
     font-size: 1.8rem;
-    color: white;
+    color: #051836;
     margin-bottom: 0.5rem;
 }
 
@@ -349,7 +371,7 @@ nav ul li a:hover {
     font-weight: 150px;
     max-width: 700px;
     margin: 0 auto 0.7rem;
-    color: rgb(38, 40, 41);
+    color: #051836;
 
 }
 
@@ -683,8 +705,8 @@ nav ul li a:hover {
         .hire-hero {
             background: 
                         url('images/leonie-zettl-4fK42t9P28E-unsplash.jpg') center/cover;
-            color: white;
-            padding: 100px 0;
+            color: #051836;
+            padding: 150px 0;
             text-align: center;
         }
 
@@ -693,10 +715,10 @@ nav ul li a:hover {
     background-color: var(--light);
 }
 #hire-drivers-text{
-    background-color: rgba(119, 119, 124, 0.709);
+    background-color: rgba(237, 237, 243, 0.309);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
-            padding: 10px;
+            padding: 5px;
             border-radius: 30px;
 }
 
@@ -920,7 +942,8 @@ nav ul li a:hover {
 
 /* Footer */
 .footer {
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
+    background-color: #051838;
     color: white;
     padding: 60px 0 0;
         margin-bottom: 20px;
@@ -1019,161 +1042,267 @@ nav ul li a:hover {
     color: white;
 }
 
+/* Payment Methods Styles */
+.payment-methods {
+    text-align: center;
+}
+
+.payment-method {
+    background: rgba(52, 152, 219, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.payment-method:hover {
+    transform: translateY(-5px);
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.payment-icon {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.payment-icon i {
+    background: rgba(52, 152, 219, 0.1);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .payment-method {
+        margin-bottom: 15px;
+    }
+}
+
+        :root {
+            --primary: rgb(26,58,110);
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+            --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Rates Hero Section */
         .rates-hero {
             background: 
-                        url('images/stephen-phillips-hostreviews-co-uk-em37kS8WJJQ-unsplash.jpg') center/cover;
+                        url('images/cardmapr-nl-XH2JFgT4Abc-unsplash.jpg') center/cover;
             color: white;
-            padding: 180px 0;
+            padding: 100px 0 80px;
             text-align: center;
-        }
-        #rates-hero-text{
-            background-color: rgba(119, 119, 124, 0.709);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            padding: 10px;
-            border-radius: 30px;
 
         }
-        
-        .pricing-container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
+
+        .rates-hero p{
+            color: #0b1076;
         }
-        
-        .pricing-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
+
+        #rates-hero-text{
+            background-color: rgba(255, 255, 255, 0.312);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 30px;
+            margin-top: 50px;
+            padding: 5px;
+
         }
-        
-        .tab-btn {
-            padding: 12px 25px;
-            background: var(--light);
-            border: none;
-            cursor: pointer;
-            font-weight: 600;
-            transition: var(--transition);
-            border-radius: 5px 5px 0 0;
-            margin: 0 5px;
+
+        .rates-hero h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #07135f;
         }
-        
-        .tab-btn.active {
-            background: var(--primary);
-            color: white;
-        }
-        
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .pricing-card {
+
+        /* Pricing Cards */
+        .rate-card {
             background: white;
             border-radius: 10px;
-            overflow: hidden;
             box-shadow: var(--shadow-sm);
+            padding: 30px;
+            margin-bottom: 30px;
             transition: var(--transition);
         }
-        
-        .pricing-card:hover {
-            transform: translateY(-10px);
+
+        .rate-card:hover {
             box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
         }
-        
-        .card-header {
-            background: var(--primary);
-            color: white;
-            padding: 20px;
-            text-align: center;
+
+        .rate-header {
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
         }
-        
-        .card-price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 10px 0;
-        }
-        
-        .card-price span {
-            font-size: 1rem;
-            font-weight: normal;
-        }
-        
-        .card-body {
-            padding: 25px;
-        }
-        
-        .card-features {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        
-        .card-features li {
-            padding: 8px 0;
+
+        .rate-features li {
+            padding: 12px 0;
             border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .rate-features li:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-box {
+            background: rgba(52, 152, 219, 0.08);
+            border-left: 4px solid var(--secondary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        /* Service Grid */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        /* Policy Sections */
+        .policy-section {
+            margin: 50px 0;
+        }
+
+        .policy-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .policy-card h3 {
+            color: var(--primary);
+            margin-top: 0;
             display: flex;
             align-items: center;
         }
-        
-        .card-features li i {
-            color: var(--secondary);
+
+        .policy-card h3 i {
             margin-right: 10px;
+            color: var(--accent);
         }
-        
-        .card-cta {
-            text-align: center;
+
+        /* Reservation Form */
+        .reservation-form {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow-sm);
+            margin: 40px 0;
         }
-        
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* FAQ Section */
         .faq-section {
             background: var(--light);
             padding: 60px 0;
         }
-        
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
+
         .faq-item {
-            background: white;
             margin-bottom: 15px;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
         }
-        
+
         .faq-question {
-            padding: 15px 20px;
-            background: var(--primary);
-            color: white;
+            background: white;
+            padding: 18px 20px;
+            border-radius: 5px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: var(--shadow-sm);
+            font-weight: 600;
         }
-        
+
         .faq-answer {
             padding: 20px;
+            background: white;
+            border-radius: 0 0 5px 5px;
+            margin-top: 3px;
             display: none;
+            box-shadow: var(--shadow-sm);
         }
-        
+
         .faq-answer.active {
             display: block;
         }
-        
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .pricing-tabs {
-                flex-direction: column;
+            .rates-hero {
+                padding: 80px 0 60px;
             }
             
-            .tab-btn {
-                border-radius: 5px;
-                margin-bottom: 5px;
+            .rates-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
             }
         }
-
 
 /* Responsive Styles */
 @media (max-width: 992px) {
@@ -1199,7 +1328,11 @@ nav ul li a:hover {
     #about-text {
         width: 80%;
     }
+    #menu-toggle{
+        color: #fff;
+    }
 }
+
 
 @media (max-width: 768px) {
     nav.desktop-nav {
