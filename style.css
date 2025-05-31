@@ -398,7 +398,6 @@ nav ul li a:hover {
             -webkit-backdrop-filter: blur(5px);
             color: #07135f;
     border-radius: 50px;
-    color: black;
     padding: 1px;
     margin-bottom: 20px;
     display: flex;
