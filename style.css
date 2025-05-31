@@ -393,10 +393,10 @@ nav ul li a:hover {
 }
 
 #hero-text {
-            background-color: rgba(255, 255, 255, 0.312);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            color: #07135f;
+    background-color: rgba(255, 255, 255, 0.312);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #07135f;
     border-radius: 50px;
     padding: 1px;
     margin-bottom: 20px;
