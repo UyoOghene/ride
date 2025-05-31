@@ -25,7 +25,7 @@ body {
     line-height: 1.6;
     color: var(--dark);
     background-color: #f9f9f9;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .container {
@@ -167,47 +167,41 @@ nav ul li a:hover {
 }
 .contact-method-section {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 60px 0; /* Reduced side padding */
+    justify-content: center;
+    width: 100%;
+    padding: 60px 20px;
+    gap: 60px;
     color: white;
-    margin: 0px;
-    max-width: 1200px;
     position: relative;
-}
-
-.cop-picture {
-    flex: 1;
-    position: relative;
-    height: 400px; /* Increased height */
-    min-width: 300px;
     overflow: hidden;
-    border-radius: 30px;
 }
 
-/* Cloudy/blurred edges effect */
-.cop-picture::before,
-.cop-picture::after {
+/* Optional: Add a subtle pattern overlay */
+.contact-method-section::before {
     content: '';
     position: absolute;
     top: 0;
-    width: 100px; /* Width of the blur effect */
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.cop-picture::before {
     left: 0;
-    background: linear-gradient(90deg, rgba(226, 221, 221, 0.8) 0%, transparent 100%);
-    filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 15px 15px;
+    opacity: 0.3;
 }
 
-.cop-picture::after {
-    right: 0;
-    background: linear-gradient(270deg, rgba(255,255,255,0.8) 0%, transparent 100%);
-    filter: blur(10px);
+.cop-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width: 450px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .cop-picture img {
@@ -215,92 +209,132 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
     object-position: center;
-
-    display: block;
-    transition: transform 0.5s ease;
-     mask-image: linear-gradient(to right, black 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+    transition: transform 0.5s ease, filter 0.3s ease;
+    filter: brightness(0.95) contrast(1.05);
 }
 
 .cop-picture:hover img {
-    transform: scale(1.05);
-}
-
-.cop-picture h2 {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    font-size: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
-    border-radius: 10px;
-    z-index: 3;
+    transform: scale(1.03);
+    filter: brightness(1) contrast(1.1);
 }
 
 .contact-method-box {
-
-    flex: 1;
-    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    z-index: 1;
 }
 
 .contact-method {
     display: flex;
     align-items: center;
-    background: rgba(9, 41, 93, 0.9);
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(9, 41, 93, 0.95);
     border-radius: 15px;
-    padding: 25px;
+    padding: 30px;
     margin-bottom: 25px;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    backdrop-filter: blur(5px);
 }
 
 .contact-method:hover {
-    background: rgba(26, 58, 110, 1);
+    background: rgba(26, 58, 110, 0.98);
     transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
-.contact-icon{
-    margin: 10px;
-    padding-bottom: 10px;
+.contact-icon {
+    font-size: 1.5rem;
+    color: #5ac400;
+    margin-right: 25px;
+    min-width: 50px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-method:hover .contact-icon {
+    transform: scale(1.1);
+    color: #6fd42a;
+}
+
+.contact-details{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-details h4 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.contact-details p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.contact-details a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.contact-details a:hover {
+    color: #5ac400;
+    text-decoration: underline;
 }
 
 .whatsapp-info {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.9rem;
-  color: #25D366; /* WhatsApp green */
-  margin-left: 8px;
-  text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #25D366;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .whatsapp-info i {
-  margin-right: 4px;
+    margin-right: 6px;
+        color: #2eff71;
+
+    font-size: 1.2rem;
 }
 
 .whatsapp-info:hover {
-  text-decoration: underline;
+    color: #2eff71;
+    text-decoration: none;
 }
 
+.small {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
 
-/* Responsive adjustments */
+/* Media queries */
 @media (max-width: 992px) {
     .contact-method-section {
         flex-direction: column;
-        padding: 40px 20px;
+        gap: 40px;
+        padding: 50px 20px;
     }
     
     .cop-picture {
         width: 100%;
-        margin-bottom: 30px;
-        min-width: auto;
-        height: 300px;
+        max-width: 500px;
+        height: 350px;
     }
     
     .contact-method-box {
         width: 100%;
+        max-width: 500px;
         padding: 0;
     }
 }
@@ -309,7 +343,7 @@ nav ul li a:hover {
     .contact-method {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
+        padding: 25px;
     }
     
     .contact-icon {
@@ -317,18 +351,25 @@ nav ul li a:hover {
         margin-bottom: 15px;
     }
     
-    .cop-picture h2 {
-        font-size: 1.5rem;
-        padding: 8px 15px;
+    .cop-picture {
+        height: 280px;
+        border-radius: 15px;
     }
     
-    .cop-picture::before,
-    .cop-picture::after {
-        width: 50px; /* Smaller blur on mobile */
+    .contact-details h4 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-details p {
+        font-size: 1rem;
+    }
+    
+    .whatsapp-info {
+        display: block;
+        margin-left: 0;
+        margin-top: 8px;
     }
 }
-
-
 /* Hero Section */
 .hero {
 
