@@ -393,7 +393,7 @@ nav ul li a:hover {
 }
 
 #hero-text {
-    background-color: rgba(255, 255, 255, 0.312);
+    background-color: rgba(255, 255, 255, 0.849);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     border-radius: 50px;
@@ -415,8 +415,7 @@ nav ul li a:hover {
 
 .hero p {
     /* /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-    font-style: oblique; 
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 150px;
     max-width: 700px;
     margin: 0 auto 0.7rem;
@@ -769,7 +768,7 @@ nav ul li a:hover {
     background-color: var(--light);
 }
 #hire-drivers-text{
-    background-color: rgba(237, 237, 243, 0.309);
+    background-color: rgba(237, 237, 243, 0.743);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
             padding: 5px;
