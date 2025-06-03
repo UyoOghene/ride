@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rume | Hiring proffesional drivers</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Rume provides professional designated driver services across Canada. Safe and reliable transportation after drinks, medical appointments, or whenever you can’t drive.">
+
+    <meta property="og:title" content="Rume | Professional Designated Driver Service in Canada">
+    <meta property="og:description" content="Safe and reliable designated driver service across Canada for after drinks, medical appointments, and more.">
+    <meta property="og:image" content="https://rumedrivers.com/images/rumelogo.jpg">
+    <meta property="og:url" content="https://rumedrivers.com">
+    <meta property="og:type" content="website">
+
+
+    <link rel="canonical" href="https://rumedrivers.com/">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="keywords" content="designated driver, driver, safe ride home, driver service, Canada designated driver, medical transportation, bar pickup, after-drinks safe ride">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "RumeDrivers",
+  "url": "https://rumedrivers.com",
+  "telephone": "+1 437-998-1586",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4673 Jane Street",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "postalCode": "M3N 2L1",
+    "addressCountry": "CA"
+  }
+}
+</script>
+
+</head>
+<body>
+    <header>
+    <div id="header" class="container">
+        <div class="logo">
+            <a href="/index.html"> <img src="/images/rumelogo.jpg" id="logo-pic" alt="logo-picture"></a>
+
+            <p>Your Safety,<br> Our Priority</p>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/careers.html">Hiring</a></li>
+                <li><a href="/rates.html">Rates</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Menu Toggle - -->
+        <div class="mobile-menu" id="mobile-menu">
+            <i class="fas fa-bars" id="menu-toggle"></i>
+            <i class="fas fa-times" id="close-menu" style="display: none;"></i>
+        </div>
+        
+        <!-- Mobile Navigation  -->
+        <div class="mobile-nav">
+            <ul class="mobile-menu-ul">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/careers.html">Hiring</a></li>
+                <li><a href="/rates.html">Rates</a></li>
+            </ul>
+        </div>
+        
+        <!-- Overlay for mobile menu -->
+        <div class="menu-overlay" id="menu-overlay"></div>
+    </div>
+</header>
+    <section class="hire-hero">
+        <div id="hire-drivers-text" class="container">
+            <h1>Professional Drivers</h1>
+            <p>We are Hiring experienced licensed drivers</p>
+        </div>
+    </section>
+
+
+   <!-- Hiring -->
+<section class="hire-drivers">
+    <div class="container">
+        <h2>Join Our Team of Professional Drivers</h2>
+        <p class="section-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+        
+        <div class="hire-form-container">
+            <form id="driverHireForm" class="hire-form" action="https://formspree.io/f/xkgbwkna" method="POST">
+                <div class="form-group">
+                    <label for="driverName">Full Name</label>
+                    <input type="text" id="driverName" name="name" required placeholder="John Doe">
+                </div>
+                
+                <div class="form-group">
+                    <label for="driverEmail">Email Address</label>
+                    <input type="email" id="driverEmail" name="email" required placeholder="john@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="driverPhone">Phone Number</label>
+                    <input type="tel" id="driverPhone" name="phone" required placeholder="+1234567890">
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="driverExperience">Years of Driving Experience</label>
+                    <select id="driverExperience" name="experience" required>
+                        <option value="" disabled selected>Select experience</option>
+                        <option value="1-2">1-2 years</option>
+                        <option value="3-5">3-5 years</option>
+                        <option value="5+">5+ years</option>
+                    </select>
+                </div>
+                
+                
+                <!-- Hidden honeypot field for spam prevention -->
+                <input type="text" name="_gotcha" style="display:none">
+                
+                <!-- Formspree redirect after submission -->
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                
+                <input type="hidden" name="_subject" value="New Driver Application">
+                
+                <button type="submit" class="btn btn-submit">Apply Now</button>
+            </form>
+            
+            <div id="thankYouMessage" class="thank-you-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You for Your Application!</h3>
+                <p>We've received your information and will contact you within 24 hours.</p>
+                <p>Our team will verify your driver's license and discuss next steps.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-phone"></i> <a href="tel:4379981586">437-998-1586</a></p>
+                <p><a
+                    class="whatsapp-info"
+                    href="https://wa.me/4379981586"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <i class="fab fa-whatsapp"></i>  (Also on WhatsApp, click to chat!)
+                </a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:rumedesignateddrivers@gmail.com">rumedesignateddrivers@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Serving all major Canadian cities</p>
+                
+            </div>
+            <div class="contact-form">
+                <h3>Book a Driver</h3>
+<form id="booking-form" action="https://formspree.io/f/xqaqvlok" method="POST">
+    <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+    </div>
+    <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Email (optional)">
+    </div>
+
+    <!-- Pickup Location -->
+    <div class="form-group">
+        <div class="location-input-group">
+            <input type="text" id="pickup" name="pickup" placeholder="Pickup Location" required>
+            <button type="button" class="gps-btn" data-field="pickup">
+                <i class="fas fa-location-arrow"></i> Use My Location
+            </button>
+        </div>
+        <input type="hidden" id="pickup-lat" name="pickupLat">
+        <input type="hidden" id="pickup-lng" name="pickupLng">
+    </div>
+
+    <!-- Destination -->
+    <div class="form-group">
+        <div class="location-input-group">
+            <input type="text" id="destination" name="destination" placeholder="Destination" required>
+            <button type="button" class="gps-btn" data-field="destination">
+                <i class="fas fa-location-arrow"></i> Use My Location
+            </button>
+        </div>
+        <input type="hidden" id="destination-lat" name="destinationLat">
+        <input type="hidden" id="destination-lng" name="destinationLng">
+    </div>
+
+    <div class="form-group">
+        <textarea id="details" name="details" placeholder="Additional Details"></textarea>
+    </div>
+    <button type="submit" class="btn">Request Driver</button>
+</form>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-steering-wheel"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Rume<span></span></h1>
+                        </div>
+                    </div>
+                    <p>Your safety is our mission. Professional designated driver service across Canada.</p>
+                    <!-- <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div> -->
+                </div>
+                <div class="footer-links">
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:437-998-1586">437-998-1586</a></p>
+                    <p><a
+                        class="whatsapp-info"
+                        href="https://wa.me/4379981586"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <i class="fab fa-whatsapp"></i>  (Also on WhatsApp, click to chat!)
+                    </a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:rumedesignateddrivers@gmail.com">rumedesignateddrivers@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Serving Canada Nationwide</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rume. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/privacy-policy.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6828d979e9a0a8190cd25152/1irfp31ql';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+
+    <script src="./app.js"></script>
+
+ 
+</body>
+</html>
